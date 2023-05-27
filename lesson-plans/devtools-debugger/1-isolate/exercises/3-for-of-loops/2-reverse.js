@@ -12,7 +12,10 @@ for (let nextChar of toReverse) {
 
 let transformation = toReverse + ' -> ' + backwards;
 
-alert(transformation);
+// The simplest decision:
+let backTransformation = backwards + ' -> ' + toReverse;
+
+alert(transformation + '\n' + backTransformation);
 
 /*  ===== Challenges =====
   - Put the characters back in the right order after the string was reversed.

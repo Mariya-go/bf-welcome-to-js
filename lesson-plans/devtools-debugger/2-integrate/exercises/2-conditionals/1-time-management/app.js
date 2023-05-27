@@ -22,9 +22,9 @@ whenFormDataChanges('sleep-info', () => {
   let advice = '';
   if (isTired && hasTime) {
     advice = 'Take a nap!';
-  } else if (!isTired && hasTime) {
+  } if (!isTired && hasTime) {
     advice = 'Study some flashcards.';
-  } else if (isTired && !hasTime) {
+  } if (isTired && !hasTime) {
     advice = 'Make some coffee.';
   } else (!isTired && !hasTime) {
     advice = 'Have a great day!';

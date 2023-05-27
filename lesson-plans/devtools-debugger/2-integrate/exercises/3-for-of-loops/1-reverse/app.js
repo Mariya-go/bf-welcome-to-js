@@ -13,9 +13,9 @@ whenFormDataChanges('reversify', () => {
   // --- read user input ---
 
   let text = readString('to-reverse');
-  let screaming = readBoolean('loud');
+  // let screaming = readBoolean('loud');
 
-  console.log(text, screaming);
+  console.log(text);
 
   // --- reverse the string input ---
 
@@ -26,13 +26,29 @@ whenFormDataChanges('reversify', () => {
 
   console.log(reversed);
 
+  // --- remove dublikate charakters ---
+  let reversedCut = '';
+  let cut = '';
+  for (let cutChar of reversed) {
+    if (cutChar !== cut) {
+    cut = cutChar;
+    reversedCut += cut;
+    }
+  }
+
+  
+
   // --- set to upper or lower case ---
 
   let finalText = '';
-  if (screaming) {
-    finalText = reversed.toUpperCase();
-  } else {
-    finalText = reversed.toLowerCase();
+  if (text.length >= 10) {
+    finalText = reversedCut.toUpperCase();
+  }
+  if (text.length < 5) {
+    finalText = reversedCut.toLowerCase();
+  }
+  if (text.length >= 5 && text.length < 10) {
+    finalText = reversedCut;
   }
 
   console.log(finalText);
