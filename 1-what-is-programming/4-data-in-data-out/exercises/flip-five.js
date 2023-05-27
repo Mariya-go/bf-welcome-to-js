@@ -3,13 +3,17 @@
 /* Flip Five
 
   Data In:
+  any text
 
-
-  Data Out:
-
+  Data Out: 
+  reverse text if text lenth is eaqual 5
+  the same text if text lenth is not eaqual 5
 
   Test Cases:
-
+  ' ' --> ' '
+  'dfdg' --> 'dfdg'
+  '12345' --> '54321'
+  'dfghjk' --> 'dfghjk'
 
 */
 

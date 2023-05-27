@@ -2,12 +2,14 @@
 
 'use strict';
 
-// a <- 'y'
+let a = 'y'; // a <- 'y'
 
-// b <- 'x'
+let b = 'x'; // b <- 'x'
 
-// temp <- b
+let temp = b; // temp <- b
 
-// b <- a
+b = a; // b <- a
 
-// a <- temp
+a = temp; // a <- temp
+
+console.log(a, b, temp);

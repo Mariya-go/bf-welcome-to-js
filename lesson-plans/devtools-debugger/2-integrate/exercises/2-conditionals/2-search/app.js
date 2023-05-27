@@ -21,26 +21,26 @@ whenFormDataChanges('search-input', () => {
 
   let doesExist = false;
 
-  if (caseSensitive) {
-    doesExist = searchThis.includes(findThis);
-  } else {
-    let smallSearchThis = searchThis.toLowerCase();
-    let smallFindThis = findThis.toLowerCase();
-    doesExist = smallSearchThis.includes(smallFindThis);
-  }
+if (!caseSensitive) {
+  let smallSearchThis = searchThis.toLowerCase();
+  let smallFindThis = findThis.toLowerCase();
+  doesExist = smallSearchThis.includes(smallFindThis);
+} else {
+  doesExist = searchThis.includes(findThis);
+}
 
   // --- create the message ---
 
   let message = '';
 
   if (doesExist) {
-    message = 'yes';
+    message = `the text contains ${findThis}`;
   } else {
-    message = 'no';
+    message = `this text does not contains ${findThis}`;
   }
 
   // --- display the search results ---
-
+  
   displayString('search-result', message);
 });
 

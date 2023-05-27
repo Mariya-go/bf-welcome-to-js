@@ -5,7 +5,7 @@ import {
   displayString,
 } from '../../../../../lib/dom-io/index.js';
 
-whenFormDataChanges('user-info', () => {
+whenFormDataChanges('nametag', () => {
   // debugger;
   console.log('\n--- form data changed ---');
 
@@ -21,5 +21,5 @@ whenFormDataChanges('user-info', () => {
 
   // --- display the message ---
 
-  displayString('greeting-output', greeting);
+  displayString('greeting', greeting);
 });
