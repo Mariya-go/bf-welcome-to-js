@@ -2,15 +2,15 @@
 
 let text = null;
 while (text === null) {
-  text = prompt('enter some text, each character will be doubled:');
+  text = prompt('enter some text, to each character will be add hyphen:');
 }
 
-let doubled = '';
+let hyphen = '';
 for (let nextChar of text) {
-  doubled = doubled + nextChar + nextChar;
+  hyphen = hyphen + nextChar + "-";
 }
 
-alert(doubled);
+alert(hyphen);
 
 /*  ===== Challenges =====
   - Add an hyphen after each character.
