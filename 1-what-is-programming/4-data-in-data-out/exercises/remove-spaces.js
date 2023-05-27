@@ -3,13 +3,18 @@
 /* Remove Spaces
 
   Data In:
-
+  any text
 
   Data Out:
-
+  text without spaces
 
   Test Cases:
-
+  dfdgf fhdhh --> before: dfdgf fhdhh
+                  after: dfdgffhdhh
+  d d --> before: d d
+          after: dd
+  dfdf --> before: dfdf
+            after: dfdf
 
 */
 

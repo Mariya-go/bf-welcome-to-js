@@ -3,13 +3,14 @@
 /* Reverse
 
   Data In:
-
+  any text
 
   Data Out:
-
+  reversed text
 
   Test Cases:
-
+  asdfg --> asdfg -> gfdsa
+  asdf ghj --> asdf ghj -> jhg fdsa
 
 */
 
