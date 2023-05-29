@@ -18,7 +18,7 @@ whenFormDataChanges('input', () => {
 
   let mirrored = ' ' + textSeparetor + ' ';
   for (let char of userText) {
-     mirrored = char.toLowerCase() + mirrored + char.toUpperCase();
+    mirrored = char.toLowerCase() + mirrored + char.toUpperCase();
   }
 
   // --- display the result ---
