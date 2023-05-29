@@ -20,26 +20,26 @@
 /* --- gather user input --- */
 
 let input = null;
-while (true) {
+while (input === null) {
   input = prompt('enter something with 5 characters and it will be reversed.');
   console.log(input);
+}
 
-  /* --- check that the user input is 5 characters long --- */
-
-  if (input !== null && input.length === 5) {
-    break;
-  } else {
-    alert('nope, try again.');
+/* --- check that the user input is 5 characters long --- */
+let message = '';
+if (input !== null && input.length === 5) {
+  for (let character of input) {
+    message = character + message;
   }
+  console.log(message);
+  } else {
+  for (let character of input) {
+    message = message + character;
+  }
+  console.log(message);
 }
 
 /* --- create the final message --- */
-
-let message = '';
-for (let character of input) {
-  message = character + message;
-}
-console.log(message);
 
 /* --- display the message --- */
 
