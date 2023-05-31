@@ -6,20 +6,20 @@ console.log('--- in execution phase ---');
 
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected string
 
-  location:
+  location: 23
 
-  life cycle:
+  life cycle: execution
 
-  the mistake:
+  the mistake: we can't use ' twise in string
 
-  the fix(es):
+  the fix(es): change one ' to ""
 */
 
-const quotesInQuotes = 'remind yourself ''i can do this!'' at least once a day';
+const quotesInQuotes = 'remind yourself "i can do this!" at least once a day';
 
 
