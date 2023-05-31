@@ -7,21 +7,21 @@ console.log('--- in execution phase ---');
 
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: Unexpected number
 
-  location:
+  location: 25
 
-  life cycle:
+  life cycle: execution
 
-  the mistake:
+  the mistake: we can't use only numbers in variables name
 
-  the fix(es):
+  the fix(es): add world before number
 */
 
 
-const 3 = 'three';
+const number3 = 'three';
 
 

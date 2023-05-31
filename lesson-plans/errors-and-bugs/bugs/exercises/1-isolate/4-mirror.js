@@ -9,20 +9,20 @@
 
 
   experiment 1
-    line:
-    why:
-    trying:
+    line: 25
+    why: it's not workin like mirror
+    trying: change the order of variables
 
 */
 
 let text = null;
-while (text === null) {
+while (!text) {
   text = prompt('enter some text, it will be mirrored');
 }
 
-let mirrored = '|';
+let mirrored = ' | ';
 for (const character of text) {
-  mirrored = mirrored + character + mirrored;
+  mirrored = character + mirrored + character;
 }
 
 alert(mirrored);
