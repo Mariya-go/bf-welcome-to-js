@@ -16,13 +16,13 @@
 */
 
 const firstName = 'Brobes';
-
+debugger;
 const lastName = 'Pierre';
 
 // the debugger statement will pause your code like a breakpoint, but ...
 //  they are saved in your source code so it's always there for later
 //  you can't turn them on an off while the program is running
-debugger;
+
 const fullName = firstName + ' ' + lastName;
 
 console.log('fullName:', fullName);

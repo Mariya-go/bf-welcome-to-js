@@ -4,7 +4,7 @@
 
 let toBeFrogged = null;
 
-while (toBeFrogged === null) {
+while (!toBeFrogged) {
   toBeFrogged = prompt(
     'enter some text to frogify.\n' +
       '- "f" will be replaced with "frog"\n' +

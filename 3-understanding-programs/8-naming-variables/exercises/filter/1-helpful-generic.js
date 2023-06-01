@@ -4,6 +4,6 @@
 
 /* generic
 
-  _a -> __:
+  _a -> input:
 
 */

@@ -3,17 +3,17 @@
 'use strict';
 
 /*
-  _a:
-    declaration:
-      init:
-      types:
-      scopes:
-    reads:
-      scopes:
-      checks:
-    assignments:
-      types:
-      scopes:
+  _a: is index
+    declaration: yes
+      init: yes
+      types: number
+      scopes: global
+    reads: 5
+      scopes: global
+      checks: wile, else if
+    assignments: 1
+      types: number
+      scopes:global
 
 
 */

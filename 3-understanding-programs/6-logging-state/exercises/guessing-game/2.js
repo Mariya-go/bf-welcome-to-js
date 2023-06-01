@@ -39,7 +39,7 @@ if (userInput === '-h') {
     while (clue === '') {
       clue = prompt('Player 1: enter a clue to help guess your phrase');
     }
-
+    console.log(clue);
     if (clue === null) {
       alert('good bye');
     } else {
@@ -78,7 +78,7 @@ if (userInput === '-h') {
         const revealTheSecret = confirm(
           'Nope, not correct. \n\ndo you want to know the secret?',
         );
-
+        console.log(guess);
         if (revealTheSecret) {
           alert(
             'The secret was:\n\n' +
@@ -89,6 +89,7 @@ if (userInput === '-h') {
               '\n\n' +
               'thanks for playing, see ya',
           );
+          console.log(secretPhrase);
         } else {
           alert('better luck next time');
         }

@@ -49,6 +49,7 @@ if (phraseIncludesQuery) {
   doesOrNot = 'does';
 } else {
   doesOrNot = 'does not';
+  console.log(phrase, query);
 }
 
 alert(

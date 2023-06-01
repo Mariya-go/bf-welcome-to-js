@@ -17,11 +17,13 @@ while (!userConfirmedPhrase) {
   if (phrase === null) {
     continue;
   }
+  console.log(phrase);
 
   userConfirmedPhrase = confirm('is this correct: "' + phrase + '"');
 }
 
 const caseSensitive = confirm('do you want a case-sensitive search?');
+console.log(caseSensitive);
 
 let query = '';
 
@@ -33,6 +35,7 @@ while (!userConfirmedQuery) {
   if (query === null) {
     continue;
   }
+  console.log(query);
 
   userConfirmedQuery = confirm('is this correct: "' + query + '"');
 }
@@ -45,6 +48,7 @@ if (caseSensitive) {
   const lowerCaseQuery = query.toLowerCase();
   phraseIncludesQuery = lowerCasePhrase.includes(lowerCaseQuery);
 }
+console.log(phraseIncludesQuery);
 
 let doesOrNot = '';
 if (phraseIncludesQuery) {
