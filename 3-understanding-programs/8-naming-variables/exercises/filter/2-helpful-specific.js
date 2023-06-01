@@ -4,6 +4,6 @@
 
 /* specific
 
-  _a -> _:
+  _a -> vowels:
 
 */

@@ -7,10 +7,11 @@
 */
 
 let phrase = null;
-while (phrase === null) {
+while (!phrase) {
   phrase = prompt(
     'enter something with duplicated letters, they will be removed',
   );
+  console.log(phrase);
 }
 
 let previous = '';

@@ -9,14 +9,16 @@
 */
 
 let phrase = null;
-while (phrase === null) {
+while (!phrase) {
   phrase = prompt('enter a phrase');
+  console.log(phrase);
 }
 
 const keepLetters = confirm(
   '"ok" to remove everything that is not a letter\n' +
     '"cancel" to repeat each character',
 );
+console.log(keepLetters);
 
 let newPhrase = '';
 if (keepLetters) {
@@ -31,5 +33,6 @@ if (keepLetters) {
     newPhrase = newPhrase + character + character;
   }
 }
+console.log(newPhrase);
 
 alert(newPhrase);

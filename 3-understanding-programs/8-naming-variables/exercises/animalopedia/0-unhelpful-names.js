@@ -3,17 +3,17 @@
 'use strict';
 
 /*
-  _a:
-    declaration:
-      init:
-      types:
-      scopes:
-    reads:
-      scopes:
-      checks:
-    assignments:
-      types:
-      scopes:
+  _a: get user input
+    declaration: yes
+      init: yes
+      types: boolean
+      scopes: global
+    reads: 2
+      scopes:global
+      checks: while
+    assignments: 1
+      types: null, string
+      scopes:global
 
 
 */
