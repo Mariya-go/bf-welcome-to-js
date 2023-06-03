@@ -23,3 +23,51 @@
       '0 . x . 0'         -> '0 . X . 0'
 
 */
+// get usr input
+let input = null;
+let message = '';
+while (!input) {
+  input = prompt('Please enter something');
+  // if user canceled
+  if (input === null) {
+    message = prompt("Tere's no escape. Please enter something");
+    continue;
+  }
+  // if empty string
+  if (input === '') {
+    message = prompt('No empty input, try again');
+    continue;
+  }
+  // is string
+  else {
+    message = input;
+    break;
+  }
+}
+
+// loop throu message
+// variable to store transformed string
+let transformedMessage = '';
+
+// variable to store index of character
+let i = 0;
+// variable for store special characters and spaces
+const special = ' 1234567890?/.,!#$%^&*|';
+
+// loop for processing the input
+for (const char of message) {
+  if (special.indexOf(char) === -1) {
+    if (i % 2 === 0) {
+      transformedMessage += char.toUpperCase();
+    } else {
+      transformedMessage += char.toLowerCase();
+    }
+  } else {
+    transformedMessage += char;
+  }
+
+  i++;
+}
+
+// display transformed text
+alert(transformedMessage);

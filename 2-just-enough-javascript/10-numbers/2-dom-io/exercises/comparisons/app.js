@@ -5,7 +5,7 @@ import {
   displayString,
 } from '../../../../../lib/dom-io/index.js';
 
-whenFormDataChanges('______', () => {
+whenFormDataChanges('nums', () => {
   // debugger;
   console.log('\n--- form data changed ---');
 
@@ -14,16 +14,111 @@ whenFormDataChanges('______', () => {
   let numberRight = readNumber('right-num');
   console.log(numberLeft, numberRight);
 
-  // --- compare the numbers ---
-  let result = numberLeft === numberRight;
   let message = '';
-  if (result) {
-    message = numberLeft + ' === ' + numberRight + '---> ' + result + '\n' + numberLeft + ' <= ' + numberRight + '---> ' + result + '\n' + numberLeft + ' >= ' + numberRight + '---> ' + result;
-  } else {
-    message = numberLeft + ' < ' + numberRight + '---> false' + '\n' + numberLeft + ' > ' + numberRight + '---> true';
+
+  // --- compare the numbers ---
+  if (
+    (numberLeft ===
+      numberRight || numberLeft >= numberRight || numberLeft <= numberRight)
+  ) {
+    // --- create a message
+    message =
+      numberLeft +
+      ' > ' +
+      numberRight +
+      '---> ' +
+      'false' +
+      '\n' +
+      numberLeft +
+      ' >= ' +
+      numberRight +
+      '---> ' +
+      'true' +
+      '\n' +
+      numberLeft +
+      ' === ' +
+      numberRight +
+      '---> ' +
+      'true' +
+      '\n' +
+      numberLeft +
+      ' <= ' +
+      numberRight +
+      '---> ' +
+      'true' +
+      '\n' +
+      numberLeft +
+      ' < ' +
+      numberRight +
+      '---> ' +
+      'false';
+  }
+  if (numberLeft > numberRight) {
+    message =
+      numberLeft +
+      ' > ' +
+      numberRight +
+      '---> ' +
+      'true' +
+      '\n' +
+      numberLeft +
+      ' >= ' +
+      numberRight +
+      '---> ' +
+      'true' +
+      '\n' +
+      numberLeft +
+      ' === ' +
+      numberRight +
+      '---> ' +
+      'false' +
+      '\n' +
+      numberLeft +
+      ' <= ' +
+      numberRight +
+      '---> ' +
+      'false' +
+      '\n' +
+      numberLeft +
+      ' < ' +
+      numberRight +
+      '---> ' +
+      'false';
   }
 
-  // --- create a message
+  if (numberLeft < numberRight) {
+    message =
+      numberLeft +
+      ' > ' +
+      numberRight +
+      '---> ' +
+      'false' +
+      '\n' +
+      numberLeft +
+      ' >= ' +
+      numberRight +
+      '---> ' +
+      'false' +
+      '\n' +
+      numberLeft +
+      ' === ' +
+      numberRight +
+      '---> ' +
+      'false' +
+      '\n' +
+      numberLeft +
+      ' <= ' +
+      numberRight +
+      '---> ' +
+      'true' +
+      '\n' +
+      numberLeft +
+      ' < ' +
+      numberRight +
+      '---> ' +
+      'true';
+    
+  }
 
   // --- display the message ---
   displayString('compared', message);

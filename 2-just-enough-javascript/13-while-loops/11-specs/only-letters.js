@@ -20,14 +20,32 @@
 */
 
 console.log('--- begin program ---');
+let userInput;
+while (!userInput) {
+  userInput = prompt('add only uppercase or lowercase letter');
+}
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
+let special = '`~1!2@3#4$5%6^7&8*9(0)-_=+{[}]|/?.>,"';
+let isSpecial = true;
 
 /* --- create final output --- */
-
-while (_) {}
+while (isSpecial) {
+  for (const char of userInput) {
+    if (special.indexOf(char) === -1) {
+      output = userInput;
+      isSpecial = false;
+    } else {
+      userInput = prompt(
+        'add only uppercase or lowercase letter, characters not alowed',
+      );
+      isSpecial = true;
+      break;
+    }
+  }
+}
 
 /* --- alert the result --- */
 

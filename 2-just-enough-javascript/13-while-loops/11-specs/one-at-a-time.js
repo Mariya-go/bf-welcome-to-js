@@ -16,20 +16,44 @@
 
 */
 
-console.log('--- begin program ---');
+console.log('--- be gin program ---');
+let input = prompt('add single character to get output');
+while (!input || input.length > 1) {
+  if (input === null) {
+    input = prompt('cansel not allowed, add single character to get output');
+  } else if (input === '') {
+    input = prompt(
+      'you need to put character, add single character to get output',
+    );
+  } else if (input.length > 1) {
+    input = prompt('you need to put only one character');
+  }
+}
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = input;
+let char;
 
 /* --- create final output --- */
 
-while (_) {}
+let final = false;
+
+while (!final) {
+  final = confirm('is your output finished?');
+  if (final === false) {
+    char = prompt('your output is "' + output + '". enter next character');
+    output += char;
+    console.log(output);
+  } else {
+    alert(output);
+  }
+}
 
 /* --- alert the result --- */
 
 console.log('output:', output);
-alert(output);
+
 
 console.log('--- end program ---');
 

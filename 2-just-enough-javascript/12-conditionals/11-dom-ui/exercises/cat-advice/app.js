@@ -17,24 +17,32 @@ whenFormDataChanges('user-data', () => {
   let advice = '';
   if (likesCat) {
     advice = 'get a cat';
+    
   }
   if (alergic) {
     advice = 'you are doing great';
+    
   }
   if (ownCat) {
     advice = 'you could be doing worse';
+    
   }
   if (likesCat && alergic) {
     advice = 'make a friend who has a cat';
+    
   }
-  if (likesCat && alergic && ownCat) {
-    advice = 'replace your cat with a stuffed animal';
-  }
+  
   if (likesCat && ownCat) {
     advice = 'you are doing great';
+    
   }
   if (alergic && ownCat) {
     advice = 'rethink your life choices';
+    
+  }
+  if (likesCat && alergic && ownCat) {
+    advice = 'replace your cat with a stuffed animal';
+    
   }
 
   // --- display advice for the user ---
