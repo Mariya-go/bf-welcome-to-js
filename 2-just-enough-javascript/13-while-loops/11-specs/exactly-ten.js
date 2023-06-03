@@ -21,13 +21,34 @@
 
 console.log('--- begin program ---');
 
-/* --- declare initial output --- */
+let input = prompt('Please provide input that is 10 characters long');
 
-let output = _;
+
+
+while (!input) {
+  input = prompt('Please provide input that is 10 characters long');
+}
+
+/* --- declare initial output --- */
+let output = '';
 
 /* --- create final output --- */
-
-while (_) {}
+let length = 0;
+if (input.length === 10) {
+  output = input;
+} else if (input.length < 10) {
+  while (input.length !== 10) {
+    length = 10 - input.length;
+    output = prompt('Your input miss ' + length + ' characters');
+    input = output;
+  }
+} else if (input.length > 10) {
+  while (input.length !== 10) {
+    length = input.length - 10;
+    output = prompt('Your input more 10 on ' + length + ' characters');
+    input = output;
+  }
+}
 
 /* --- alert the result --- */
 

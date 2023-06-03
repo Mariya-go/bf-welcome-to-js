@@ -6,7 +6,7 @@ import {
 } from '../../../../../lib/dom-io/index.js';
 
 whenFormDataChanges('search-input', () => {
-  // debugger;
+  debugger;
   console.log('--- form data changed ---');
 
   // --- read the user's input ---
@@ -16,9 +16,14 @@ whenFormDataChanges('search-input', () => {
 
   // --- check the index ---
   let searchResult = '';
+  if (!character) {
+    searchResult = "oops! you don't put any char";
+    
+  }
   if (text[i] === character) {
     searchResult = 'yes';
-  } else {
+  }
+  if (text[i] !== character && character !== '') {
     searchResult = 'no';
   }
 

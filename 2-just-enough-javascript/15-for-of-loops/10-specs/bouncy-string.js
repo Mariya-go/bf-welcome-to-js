@@ -26,19 +26,51 @@
 console.log('--- begin program ---');
 
 /* --- gather user input --- */
+let input;
+while (!input) {
+  input = prompt(
+    'tape any text, without numbers and characters, it will be bounched',
+  );
+}
+// check if is input conteins a letter or character or number
+const special = '~`!1@2#3$4%5^6&7*8(9)0_-+=}]{[|"?/>.<,';
+let withoutCharacters = false;
+let newInput = '';
 
-let input = _;
-while (_) {}
+while (!withoutCharacters) {
+  for (const char of input) {
+    if (special.includes(char)) {
+      newInput = prompt(
+        'tape any text, without numbers and characters, it will be bounched',
+      );
+      input = newInput;
+      withoutCharacters = false
+      break;
+    } else {
+      withoutCharacters = true;
+      continue;
+    }
+  }
+}
+
 console.log('input:', input);
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
 
 /* --- create final output --- */
-
-for (let _ of _) {
+let isUpercase = true
+for (let letter of input) {
+  if (isUpercase) {
+    output += letter.toLocaleUpperCase()
+    isUpercase = false
+  } else {
+    output += letter.toLocaleLowerCase()
+    isUpercase = true
+  }
 }
+
 
 /* --- alert the result --- */
 

@@ -28,17 +28,24 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let input = _;
-while (_) {}
+let input;
+while (!input) {
+  input = prompt('enter something to be mirrored');
+}
 console.log('input:', input);
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = ' | ';
+const toKeep = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+
 
 /* --- create final output --- */
 
-for (let _ of _) {
+for (let letter of input) {
+  if (toKeep.includes(letter)) {
+    output = letter + output + letter;
+  }
 }
 
 /* --- alert the result --- */

@@ -27,14 +27,41 @@
 */
 
 console.log('--- begin program ---');
+// get user input
+
+let input;
+while (!input) {
+  input = prompt(
+    'Enter something starting uppercase, at least 2 character and with "." in the end',
+  );
+}
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
+let i = input.length;
+
+// check and compear input
+let firstChar = input[0].toUpperCase();
+
+if (input[0] === firstChar && input[i - 1] === '.') {
+  input = input.toLowerCase();
+  output = input.substring(0, input.length - 1);
+} else if (i < 2) {
+  while (i !== 2) {
+    input = prompt(
+      'Enter something starting uppercase, at least 2 character and with "." in the end',
+    );
+  }
+} else if (input[0] !== firstChar || input[i - 1] !== '.') {
+  while (input[0] !== firstChar && input[i - 1] !== '.') {
+    input = prompt(
+      'Enter something starting uppercase, at least 2 character and with "." in the end',
+    );
+  }
+}
 
 /* --- create final output --- */
-
-while (_) {}
 
 /* --- alert the result --- */
 

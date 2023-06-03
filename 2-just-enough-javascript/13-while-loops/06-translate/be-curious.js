@@ -5,9 +5,9 @@
 /* Be Curious
 
 
-  Data In:
+  Data In: some text
 
-  Data Out:
+  Data Out: dobled text
 
   Test Cases:
 
