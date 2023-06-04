@@ -11,10 +11,14 @@ whenFormDataChanges('search-field', () => {
   // --- read the user's input ---
   let phrase = readString('phrase');
   let charToRemove = readString('character');
+  let defoltPhrase = 'you can only skip one character at a time';
 
   // --- remove the character if there is only one ---
   let output = '';
   for (let char of phrase) {
+    if (charToRemove === '' && phrase !== '') {
+      output = defoltPhrase;
+    }
     if (charToRemove !== char) {
       output += char;
     }
