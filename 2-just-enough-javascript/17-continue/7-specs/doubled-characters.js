@@ -25,17 +25,35 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let input = _;
-while (_) {}
+let input;
+while (!input) {
+  input = prompt('print letters for be doubled');
+}
 console.log('input:', input);
 
+let newInput;
 /* --- declare initial output --- */
+let output = '';
 
-let output = _;
+let isChar = false;
+while (!isChar) {
+  for (const char of input) {
+    // check if input contains character than prompt again
+    if ('`~1!2@3#4$5%6^7&8*9(0)-_=+}]{[|"?/>.<,'.includes(char)) {
+      newInput = prompt('print only letters for be doubled');
+      input = newInput;
+      isChar = false;
+      break;
+    } else {
+      isChar = true;
+      continue;
+    }
+  }
+}
 
 /* --- create final output --- */
-
-for (let _ of _) {
+for (const letter of input) {
+  output += letter + letter;
 }
 
 console.log('output:', output);

@@ -3,18 +3,21 @@
 'use strict';
 
 /*
-  environment:
+  environment:chrome
 
-  name:
-  message:
+  name:SyntaxError
+  message:Unexpected token '{'
 
-  callstack:
+  callstack:at evaller.onload (study-with.js:63:34)
+    at Object.console (study-with.js:65:17)
+    at JavaScriptFE.studyWith (javascript-class.js:732:29)
+    at HTMLButtonElement.<anonymous> (javascript-class.js:390:49)
 
-  life cycle:
+  life cycle:creation
 
-  the mistake:
+  the mistake:miss if avter first else
 
-  the fix(es):
+  the fix(es): add if after else in 28 line
 */
 
 const userName = 'indrogo';
@@ -22,7 +25,7 @@ const userName = 'indrogo';
 if (userName.length < 3) {
   console.log('too short');
 
-} else (userName.length < 5) {
+} else if (userName.length < 5) {
   console.log('just right');
 
 } else {

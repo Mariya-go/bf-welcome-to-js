@@ -22,13 +22,34 @@
 
 console.log('--- begin program ---');
 
-/* --- declare initial output --- */
+let input;
+while (!input) {
+  input = prompt('please input 10 characters');
+}
 
-let output = _;
+/* --- declare initial output --- */
+let output = '';
 
 /* --- create final output --- */
+let newInput = '';
 
-while (_) {}
+while (true) {
+  if (input.length < 10) {
+    let short = 10 - input.length;
+    newInput = prompt('you miss ' + short + ' characters');
+    input = newInput;
+    continue;
+  } else if (input.length > 10) {
+    let long = input.length - 10;
+    newInput = prompt('you put extra ' + long + ' characters');
+    input = newInput;
+    continue;
+  } else {
+    output = input;
+
+    break;
+  }
+}
 
 /* --- alert the result --- */
 

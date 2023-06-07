@@ -3,20 +3,25 @@
 'use strict';
 
 /*
-  environment:
+  environment: chrome
 
-  name:
-  message:
+  name:ReferenceError
+  message: __is not defined
 
-  callstack:
+  callstack: 
+    at <anonymous>:20:6
+    at evaller.onload (study-with.js:63:34)
+    at Object.console (study-with.js:65:17)
+    at JavaScriptFE.studyWith (javascript-class.js:732:29)
+    at HTMLButtonElement.<anonymous> (javascript-class.js:390:49)
 
-  life cycle:
+  life cycle: execution
 
-  the mistake:
+  the mistake: variable "welf" does not declared
 
-  the fix(es):
+  the fix(es): initialise and declare variable, using let or const
 */
 
-welf = 'ingrad';
+const welf = 'ingrad';
 
 console.log(welf);

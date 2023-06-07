@@ -13,35 +13,44 @@
 
 */
 
-/* ---   ?   --- */
+/* ---   get user input   --- */
 
-// text <- null
+let text = null;
 
-// WHILE: text === null
-//   text <- prompt('enter some text')
+while (text === null) {
+  text = prompt('enter some text');
+}
+
 // :END WHILE
 
-/* ---   ?   --- */
+/* ---   finding vowel   --- */
 
-// hasAVowel <- false
+let hasAVowel = false;
 
-// FOR: letter OF text
-//   IF: 'aeiouAEIOU'.includes(letter)
-//     hasAVowel <- true
-//     BREAK
+for (const letter of text) {
+  if ('aeiouAEIOU'.includes(letter)) {
+    hasAVowel = true;
+    break;
+  }
+}
+
 //   :END IF
 // :END FOR-OF
 
-/* ---   ?   --- */
+/* ---   create message   --- */
 
-// message <- ''
+let message = ''
 
-// IF: hasAVowel
-//   message <- '"' + text + '" has at least one vowel'
-// ELSE:
-//   message <- '"' + text + '" does not have any vowels'
+if (hasAVowel) {
+message = '"' + text + '" has at least one vowel'
+} else {
+message = '"' + text + '" does not have any vowels'
+}
+
+
+
 // :END IF
 
-/* ---   ?   --- */
+/* ---   display message   --- */
 
-// alert(message)
+alert(message)

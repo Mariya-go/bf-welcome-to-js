@@ -13,33 +13,41 @@
 
 */
 
-/* ---   ?   --- */
+/* ---   get user input   --- */
 
-// input <- null
+let input = null;
 
-// WHILE: true
-//   input <- prompt('enter something with at least one space, the spaces will be removed')
-//   IF: input === null
-//     alert('no escape')
-//   ELSE: IF: input === ''
-//     alert('gotta enter something')
-//   ELSE: IF: !input.includes(' ')
-//     alert('there must be a space!')
-//   ELSE:
-//     BREAK
+while (true) {
+  input = prompt(
+    'enter something with at least one space, the spaces will be removed',
+  );
+
+  if (input === null) {
+    alert('no escape');
+  } else if (input === '') {
+    alert('gotta enter something');
+  } else if (!input.includes(' ')) {
+    alert('there must be a space!');
+  } else {
+    break;
+  }
+}
 //   :END IF
 // :END WHILE
 
-/* ---   ?   --- */
+/* ---   remove space   --- */
 
-// spaceless <- ''
+let spaceless = '';
 
-// FOR: char OF input
-//   IF: char !== ' '
-//     spaceless <- spaceless + char
+for (const char of input) {
+  if (char !== ' ') {
+    spaceless += char;
+  }
+}
+
 //   :END IF
 // :END FOR-OF
 
-/* ---   ?   --- */
+/* ---   display input   --- */
 
-// alert(input + ' -> ' + spaceless)
+alert(input + ' -> ' + spaceless);

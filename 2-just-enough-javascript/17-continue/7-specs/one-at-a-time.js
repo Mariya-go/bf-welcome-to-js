@@ -20,11 +20,42 @@ console.log('--- begin program ---');
 
 /* --- declare initial output --- */
 
-let output = _;
+let input;
+while (true) {
+  input = prompt('add single characters to a string');
+  if (input === null) {
+    alert('You canceled. Please try again.');
+    continue;
+  }
+  if (input === '') {
+    alert('Input is empty. Please enter a non-empty string.');
+    continue;
+  }
+  if (input.length > 1) {
+    alert('Input is too long. Please enter one character.');
+    continue;
+  } else {
+    break;
+  }
+}
+
+/* --- declare initial output --- */
+
+let output = '';
 
 /* --- create final output --- */
+let finish = '';
 
-while (_) {}
+while (true) {
+finish = confirm('your output is completed?');
+  if (finish === true) {
+    output += input;
+    break;
+  } else {
+    input += prompt('add single characters to a string');
+    continue;
+  }
+}
 
 /* --- alert the result --- */
 

@@ -25,18 +25,49 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let input = _;
-while (_) {}
+let input;
+while (!input) {
+  input = prompt('enter some text');
+}
 console.log('input:', input);
+
+// check if is not a letter
+
+const character = '~`!1@2#3$4%5^6&7*8(9)0_-+=}]{[|":;?/>.<,';
+let notACharacter = true;
+
+while (notACharacter) {
+  for (let char of input) {
+    if (character.includes(char)) {
+      alert('only letters alowed');
+      input = prompt('enter only letters');
+      notACharacter = true;
+      break;
+    } else {
+      notACharacter = false;
+      continue;
+    }
+  }
+}
+console.log(input);
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
 
 /* --- create final output --- */
-
-for (let _ of _) {
+let swich = true;
+while(swich) {
+for (let letter of input) {
+if (input.indexOf(letter) < input.length) {
+  output += letter + letter;
+} else {
+  break;
 }
+swich = false;
+}
+}
+
 
 console.log('output:', output);
 

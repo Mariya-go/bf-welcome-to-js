@@ -29,13 +29,43 @@
 
 console.log('--- begin program ---');
 
+let input;
+while (!input) {
+  input = prompt(
+    'tape something that starts with a capital letter and ends with a period',
+  );
+}
+
 /* --- declare initial output --- */
 
-let output = _;
-
+let output = '';
 /* --- create final output --- */
 
-while (_) {}
+while (true) {
+  if (input.length < 2) {
+    alert('your text is too short. Please enter a longer text.');
+    input = prompt(
+      'tape something that starts with a capital letter and ends with a period',
+    );
+  }
+  if (input[0] !== input[0].toUpperCase()) {
+    alert('your text does not start with a capital letter. Please try again.');
+    input = prompt(
+      'tape something that starts with a capital letter and ends with a period',
+    );
+    continue;
+  } else if (input[input.length - 1] !== '.') {
+    alert('your text does not end with a period. Please try again.');
+    input = prompt(
+      'tape something that starts with a capital letter and ends with a period',
+    );
+    continue;
+  } else {
+    output = input[0].toLowerCase() + input.slice(1, -1);
+    break;
+  }
+}
+
 
 /* --- alert the result --- */
 

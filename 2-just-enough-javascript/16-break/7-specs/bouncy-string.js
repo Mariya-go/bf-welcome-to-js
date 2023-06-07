@@ -28,17 +28,45 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let input = _;
-while (_) {}
+let input;
+while (!input) {
+  input = prompt('enter some text to bouncy');
+}
+
+let special = '~!1@2#3$4%5^6&7*8(9)0_-+=}]{[|"?/>.<,:;';
+let newInput;
+let isSpecial = true;
+while (isSpecial) {
+  for (let char of input) {
+    if (special.includes(char)) {
+      alert('only letters alowed');
+      newInput = prompt('enter some text to bouncy');
+      input = newInput;
+      isSpecial = true;
+      break;
+    } else {
+      isSpecial = false;
+      continue;
+    }
+  }
+}
+
 console.log('input:', input);
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
 
 /* --- create final output --- */
-
-for (let _ of _) {
+let isUpercase = true
+for (let letter of input) {
+  if (isUpercase) {
+    output += letter.toLocaleLowerCase()
+    isUpercase = false
+  } else {
+    output += letter.toLocaleUpperCase()
+    isUpercase = true
+  }
 }
 
 /* --- alert the result --- */
