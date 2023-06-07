@@ -3,21 +3,23 @@
 'use strict';
 
 /*
-  environment:
+  environment:chrome 
 
-  name:
-  message:
+  name:SyntaxError
+  message:Invalid or unexpected token
 
-  callstack:
+  callstack:at evaller.onload (study-with.js:63:34)
+    at Object.console (study-with.js:65:17)
+    at JavaScriptFE.studyWith (javascript-class.js:732:29)
+    at HTMLButtonElement.<anonymous> (javascript-class.js:390:49)
 
-  life cycle:
+  life cycle:creation
 
-  the mistake:
+  the mistake:string split into 2 lines
 
-  the fix(es):
+  the fix(es):make string in 1 line
 */
 
-const a = 'this is
-two lines';
+const a = 'this is two lines';
 
 

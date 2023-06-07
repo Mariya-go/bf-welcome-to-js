@@ -24,11 +24,42 @@ console.log('--- begin program ---');
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
+let input;
+let notACharacter = true;
+while (true) {
+  input = prompt(
+    'Please tape some letters, all characters which are not letters not alowed',
+  );
+  if (input === null) {
+    alert('You canceled. Please try again.');
+    continue;
+  }
+  if (input === '') {
+    alert('Input is empty. Please enter a non-empty string.');
+    continue;
+  } else {
+    /* --- create final output --- */
+    const character = '~`!1@2#3$4%5^6&7*8(9)0_-+=}]{[|":;?/>.<,';
 
-/* --- create final output --- */
-
-while (_) {}
+    while (notACharacter) {
+      for (let char of input) {
+        if (character.includes(char)) {
+          alert('only letters alowed');
+          input = prompt('enter only letters');
+          output = '';
+          notACharacter = true;
+          break;
+        } else {
+          output += char;
+          notACharacter = false;
+          continue;
+        }
+      }
+    }
+  }
+  break;
+}
 
 /* --- alert the result --- */
 

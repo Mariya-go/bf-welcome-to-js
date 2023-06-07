@@ -27,22 +27,40 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let input = _;
-while (_) {}
+let input;
+while (true) {
+  input = prompt(
+    'Please tape something, all characters which are not letters will be removed',
+  );
+  if (input === null) {
+    alert('You canceled. Please try again.');
+    continue;
+  }
+  if (input === '') {
+    alert('Input is empty. Please enter a non-empty string.');
+    continue;
+  } else {
+    break;
+  }
+}
 console.log('input:', input);
 
 /* --- declare characters to keep --- */
 
-let toKeep = _;
+let toKeep = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = '';
 
 /* --- create final output --- */
 
-for (let _ of _) {
+for (let char of input) {
+  if (toKeep.includes(char)) {
+    output += char;
+  }
 }
+
 
 /* --- alert the result --- */
 

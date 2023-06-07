@@ -13,36 +13,43 @@
 
 */
 
-/* ---   ?   --- */
+/* ---   get user input   --- */
 
-// letters <- null
+let letters = null;
 
-// WHILE: letters === null
-//   letters <- prompt('enter some letters')
+while (letters === null) {
+  letters = prompt('enter some letters');
+}
+
 // :END WHILE
 
-/* ---   ?   --- */
+/* ---   check to consonants   --- */
 
-// noConsonants <- true
+let noConsonants = true;
 
-// FOR: letter OF letters
-//   lowerCaseLetter <- letter.toLowerCase()
-//   IF: 'bcdfghjklmnpqrstvwxyz'.includes(lowerCaseLetter)
-//     noConsonants <- false
-//     BREAK
+for (const letter of letters) {
+  let lowerCaseLetter = letter.toLowerCase();
+  if ('bcdfghjklmnpqrstvwxyz'.includes(lowerCaseLetter)) {
+    noConsonants = false;
+    break;
+  }
+}
+
 //   :END IF
 // :END FOR-OF
 
-/* ---   ?   --- */
+/* ---   create message   --- */
 
-// message <- ''
+let message = '';
 
-// IF: noConsonants
-//   message <- '"' + letters + '" has no consonants'
-// ELSE:
-//   message <- '"' + letters + '" has at least one consonant'
+if (noConsonants) {
+  message = '"' + letters + '" has no consonants';
+} else {
+  message = '"' + letters + '" has at least one consonant';
+}
+
 // :END IF
 
-/* ---   ?   --- */
+/* ---   display message   --- */
 
-// alert(message)
+alert(message);
