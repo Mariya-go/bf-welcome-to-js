@@ -16,17 +16,17 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING:a
+      EXPECT:a|a
+      ACTUAL:|a|
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY:change the order of variables in line 40: mirrored = character + mirrored + character;
+    PREDICT: we get correct output
+    IT DID:we get correct output
+    EXPLAIN: incorrect order gives incorrect output
 
   --- lessons learned ---
-
+We have to be carefull with order of variables at the concatination
 
 */
 
@@ -37,7 +37,7 @@ while (text === null) {
 
 let mirrored = '|';
 for (const character of text) {
-  mirrored = mirrored + character + mirrored;
+  mirrored = character + mirrored + character;
 }
 
 alert(mirrored);

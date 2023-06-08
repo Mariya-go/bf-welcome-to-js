@@ -25,3 +25,23 @@
       'GOdoGO'      ->  'at least one dog'
       'A fast dog.' ->  'at least one dog'
 */
+/* --- get user input --- */
+let input = null;
+while (input === null) {
+  input = prompt('enter some text to check if it contains dog');
+}
+
+const dogs = 'dog';
+
+let hasADog = false;
+
+  if (input.toLowerCase().includes(dogs)) {
+    hasADog = true;
+      }
+
+
+if (hasADog) {
+  alert('"' + input + '" has at least one dog');
+} else {
+  alert('"' + input + '" has no dogs');
+}

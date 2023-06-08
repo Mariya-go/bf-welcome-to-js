@@ -16,6 +16,10 @@ while (!isValid) {
     alert('there is no escape');
     continue;
   }
+  if (sentence === '') {
+    alert('no empty string');
+    continue;
+  }
 
   sentence = sentence.trim();
   if (sentence.length < 3) {
@@ -23,7 +27,7 @@ while (!isValid) {
   } else if (!sentence.includes(' ')) {
     alert('there is only one word');
   } else {
-    isValid = true;
+    break;
   }
 }
 

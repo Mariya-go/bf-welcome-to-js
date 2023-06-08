@@ -3,20 +3,23 @@
 'use strict';
 
 /*
-  environment:
+  environment:chrome
 
-  name:
-  message:
+  name:SyntaxError
+  message:Unexpected string
 
-  callstack:
+  callstack:at evaller.onload (study-with.js:63:34)
+    at Object.console (study-with.js:65:17)
+    at JavaScriptFE.studyWith (javascript-class.js:732:29)
+    at HTMLButtonElement.<anonymous> (javascript-class.js:390:49)
 
-  life cycle:
+  life cycle:creation
 
-  the mistake:
+  the mistake:use single quotes twise in one string
 
-  the fix(es):
+  the fix(es):use double quotes with single quotes in one string
 */
 
-const quotesInQuotes = 'remind yourself ''i can do this!'' at least once a day';
+const quotesInQuotes = 'remind yourself "i can do this!" at least once a day';
 
 

@@ -18,17 +18,17 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING:hello
+      EXPECT:"hello" is not excited
+      ACTUAL:"hello" is excited
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: change !== to === in first if statment
+    PREDICT:we get correct output
+    IT DID:we get correct output
+    EXPLAIN:it change logic to correct
 
   --- lessons learned ---
-
+It's good to think over a logic during writing a program
 
 */
 
@@ -41,7 +41,7 @@ while (input === null) {
 
 let isExcited = false;
 for (const char of input) {
-  if (char !== '!') {
+  if (char === '!') {
     isExcited = true;
     break;
   }

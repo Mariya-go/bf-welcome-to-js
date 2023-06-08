@@ -4,21 +4,24 @@
 
 
 /*
-  environment:
+  environment:chrome
 
-  name:
-  message:
+  name:SyntaxError
+  message:Unexpected number
 
-  callstack:
+  callstack:at evaller.onload (study-with.js:63:34)
+    at Object.console (study-with.js:65:17)
+    at JavaScriptFE.studyWith (javascript-class.js:732:29)
+    at HTMLButtonElement.<anonymous> (javascript-class.js:390:49)
 
-  life cycle:
+  life cycle:creation
 
-  the mistake:
+  the mistake:variable name can not start with number
 
-  the fix(es):
+  the fix(es):add word before number
 */
 
 
-const 3 = 'three';
+const num3 = 'three';
 
 

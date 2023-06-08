@@ -43,10 +43,8 @@
 
     TRY:
     PREDICT:
-    IT DID:
-    EXPLAIN:
-
-  --- lessons learned ---
+    IT DID: 
+    EXPLAIN: 
 
 */
 

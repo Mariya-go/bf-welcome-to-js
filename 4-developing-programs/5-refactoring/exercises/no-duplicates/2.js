@@ -10,12 +10,13 @@
 
 */
 
-let mayHaveDuplicates = null;
-while (mayHaveDuplicates === null) {
-  mayHaveDuplicates = prompt('enter something with no duplicate characters');
-}
-
+let mayHaveDuplicates;
 let hasNoDuplicates = '';
+while (true) {
+  mayHaveDuplicates = prompt('enter something with no duplicate characters');
+  if (mayHaveDuplicates === null) {
+    continue;
+  }
 for (let char of mayHaveDuplicates) {
   let isDuplicate = hasNoDuplicates.includes(char);
   if (isDuplicate) {
@@ -23,9 +24,15 @@ for (let char of mayHaveDuplicates) {
   }
   hasNoDuplicates = hasNoDuplicates + char;
 }
-
 if (hasNoDuplicates.length === mayHaveDuplicates.length) {
   alert('well done!');
+  break;
 } else {
   alert('too bad, try again');
+  break;
 }
+}
+
+
+
+

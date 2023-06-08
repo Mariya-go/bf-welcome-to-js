@@ -40,10 +40,10 @@
       ACTUAL: 'too short'
 
     TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
-
+    PREDICT: 
+    IT DID: 
+    EXPLAIN: 
+    
   --- lessons learned ---
 
 */

@@ -33,13 +33,33 @@
 */
 
 /* --- gather user input --- */
+let input = null;
+while(input === null) {
+  input = prompt('Enter some text, all repeated characters will be removed');
+}
 
 /* --- check if the input has any repeated characters --- */
 
 //  store the string with no repeats for later
 
+
+let noRepetition = '';
+  let previousChar = '';
+let nextChar = '';
+for (const char of input) {
+  nextChar = char
+  if (previousChar === nextChar) {
+    continue;
+  }
+noRepetition = noRepetition + char;
+    previousChar = char;
+}
+
 /* --- create a message for the user --- */
 
 //  you can compare the input to the string without repeats
 
+let message = input + ' --> ' + noRepetition;
+
 /* --- display the message to the user --- */
+alert(message);

@@ -14,9 +14,9 @@
   Hint: try using the `run` and `debug` buttons, what's the difference?
 
 */
-
-const firstName = 'Brobes';
 debugger;
+const firstName = 'Brobes';
+
 const lastName = 'Pierre';
 
 // the debugger statement will pause your code like a breakpoint, but ...

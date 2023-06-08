@@ -6,7 +6,7 @@ import {
 } from '../../../../../lib/dom-io/index.js';
 
 whenFormDataChanges('inputs', () => {
-  // debugger;
+  debugger;
   console.log('--- form data changed ---');
 
   // --- read the user's input ---
@@ -20,13 +20,15 @@ whenFormDataChanges('inputs', () => {
   let result;
 
   if (operator === '+') {
-    result = left + right
-  } else if (operator = '-') {
-    result = left - right
+    result = left + right;
+  } else if ((operator === '-')) {
+    result = left - right;
   } else if (operator === '*') {
     result = left * right;
-  } else {
+    console.log(result);
+  } else if (operator === '/') {
     result = left / right;
+    console.log(result);
   }
 
   // --- display the result ---
