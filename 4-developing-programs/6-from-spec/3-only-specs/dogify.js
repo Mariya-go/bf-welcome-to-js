@@ -35,3 +35,27 @@
       'Do dump'     ->  'DOGo dogump'
       'dim mooD'    -> 'dogim mooDOG'
 */
+
+/* --- get user input ---*/
+let input = null;
+while(input === null) {
+  input = prompt('enter some text, all "d" will be replaced "dog", all "D" will be replaced "DOG"')
+}
+
+/* --- replace letters --- */
+let dogged = '';
+
+for (const character of input) {
+  if (character === 'd') {
+    dogged = dogged + 'dog';
+    continue;
+  }
+  if (character === 'D') {
+    dogged = dogged + 'DOG';
+    continue;
+  }
+  dogged = dogged + character;
+}
+
+/* --- display message --- */
+alert(dogged);

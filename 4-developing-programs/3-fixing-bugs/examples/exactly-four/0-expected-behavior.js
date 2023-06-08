@@ -39,14 +39,14 @@
 
   --- experiments ---
 
-  1. FAILING:
+  1. FAILING: 
       EXPECT:
       ACTUAL:
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: 
+    PREDICT: 
+    IT DID: 
+    EXPLAIN: 
 
   --- lessons learned ---
 

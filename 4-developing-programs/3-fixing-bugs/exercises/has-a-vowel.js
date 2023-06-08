@@ -18,17 +18,17 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING:'', 'xyz'
+      EXPECT:"" has no vowels
+      ACTUAL:"" has at least one vowel
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: change value of let hasAVowel = false; and assine  hasAVowel = true; in first if condition
+    PREDICT:we get correct output for ''
+    IT DID:we get correct output for ''
+    EXPLAIN:it change logic to correct
 
   --- lessons learned ---
-
+It's good to think over a logic before writing a program
 
 */
 
@@ -39,10 +39,10 @@ while (characters === null) {
 
 const vowels = 'aeiouAEIOU';
 
-let hasAVowel = true;
+let hasAVowel = false;
 for (const char of characters) {
   if (vowels.includes(char)) {
-    hasAVowel = false;
+    hasAVowel = true;
     break;
   }
 }

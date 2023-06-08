@@ -21,8 +21,10 @@ for (let char of mayHaveDuplicates) {
   hasNoDuplicates = hasNoDuplicates + char;
 }
 
+let finalMessage = 'well done!';
 if (hasNoDuplicates.length === mayHaveDuplicates.length) {
-  alert('well done!');
+  alert(finalMessage);
 } else {
-  alert('too bad, try again');
+  finalMessage = 'too bad, try again';
+  alert(finalMessage);
 }

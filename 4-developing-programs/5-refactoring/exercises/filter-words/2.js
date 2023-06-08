@@ -32,6 +32,7 @@ sentence = sentence + ' ';
 let newSentence = '';
 
 let nextWord = '';
+
 for (const character of sentence) {
   if (character === ' ') {
     const keep = confirm(
@@ -41,6 +42,7 @@ for (const character of sentence) {
       newSentence = newSentence + character + nextWord;
     }
     nextWord = '';
+    continue;
   } else {
     nextWord = nextWord + character;
   }

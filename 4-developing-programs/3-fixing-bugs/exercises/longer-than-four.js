@@ -17,16 +17,27 @@
 
   --- experiments ---
 
-  1. FAILING:
-      EXPECT:
-      ACTUAL:
+  1. FAILING:cancel
+      EXPECT:'you canceled'
+      ACTUAL:''
 
-    TRY:
-    PREDICT:
-    IT DID:
-    EXPLAIN:
+    TRY: delete initiation of variable input inside the scope while (delete let before variable input)
+    PREDICT:we get expected output for cancel
+    IT DID: we get expected output for cancel, but still incirrect output for string
+    EXPLAIN: variable input stay global
+
+  2. FAILING:abcde
+      EXPECT:'abcde'
+      ACTUAL:stay inside loop
+
+    TRY: in line 53 change input to input.length for comparing input length
+    PREDICT:we get expected output for abcde
+    IT DID: we get expected output for abcde and over string longer than 4 characters
+    EXPLAIN: it was incorrect comparing, we need compare input length
 
   --- lessons learned ---
+
+  We need to be careful with variables inside a scope. We need to compare right type of values.
 
 
 */
@@ -35,13 +46,13 @@ let input = '';
 
 let prompting = true;
 while (prompting) {
-  let input = prompt(
+  input = prompt(
     'enter something longer than 4 characters, or "cancel" to leave',
   );
   if (input === null) {
     prompting = false;
     input = 'you canceled';
-  } else if (input > 4) {
+  } else if (input.length > 4) {
     prompting = false;
   }
 }

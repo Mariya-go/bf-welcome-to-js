@@ -3,18 +3,21 @@
 'use strict';
 
 /*
-  environment:
+  environment:chrome
 
-  name:
-  message:
+  name:SyntaxError
+  message:Identifier 'undefined' has already been declared
 
-  callstack:
+  callstack:at evaller.onload (study-with.js:63:34)
+    at Object.console (study-with.js:65:17)
+    at JavaScriptFE.studyWith (javascript-class.js:732:29)
+    at HTMLButtonElement.<anonymous> (javascript-class.js:390:49)
 
-  life cycle:
+  life cycle:creation
 
-  the mistake:
+  the mistake:variable can not be named with indentifier
 
-  the fix(es):
+  the fix(es): change variable name
 */
 
-const undefined = 'three';
+const unDefined = 'three';

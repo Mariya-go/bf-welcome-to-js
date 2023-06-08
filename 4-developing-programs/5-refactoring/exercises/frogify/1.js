@@ -18,14 +18,14 @@ while (toBeFrogged === null) {
 
 let frogged = '';
 
-for (const character of toBeFrogged) {
+for (let character of toBeFrogged) {
   if (character === 'f') {
     frogged = frogged + 'frog';
-    continue;
+    character = '';
   }
   if (character === 'F') {
     frogged = frogged + 'FROG';
-    continue;
+    character = '';
   }
   frogged = frogged + character;
 }

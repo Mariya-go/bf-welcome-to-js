@@ -14,18 +14,18 @@ while (characters === null) {
   characters = prompt('enter some characters');
 }
 
-const vowels = 'aeiouAEIOU';
+const consonants = 'qwrtypsdfghjklzxcvbnm';
 
-let hasAVowel = false;
+let hasAConsonant = false;
 for (const char of characters) {
-  if (vowels.includes(char)) {
-    hasAVowel = true;
+  if (consonants.includes(char.toLowerCase())) {
+    hasAConsonant = true;
     break;
   }
 }
 
-if (hasAVowel) {
-  alert('"' + characters + '" has at least one vowel');
+if (hasAConsonant) {
+  alert('"' + characters + '" has at least one consonant');
 } else {
-  alert('"' + characters + '" has no vowels');
+  alert('"' + characters + '" has no consonants');
 }

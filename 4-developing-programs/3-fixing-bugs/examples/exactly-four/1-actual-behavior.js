@@ -39,10 +39,10 @@
       EXPECT: 'perfect!'
       ACTUAL: 'too short'
 
-    TRY:
+    TRY:change 
     PREDICT:
-    IT DID:
-    EXPLAIN:
+    IT DID: 
+    EXPLAIN: 
 
   --- lessons learned ---
 

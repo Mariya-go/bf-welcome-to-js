@@ -35,23 +35,27 @@
 
 /* --- gather user input --- */
 //  Data In:      a string or null
-_;
+let input = prompt('Enter some text, we tell you if it has a space or not');
+
 //  Data After:   the user's input (string or null)
 
 /* --- create a message for the user --- */
 
 //  Data Before:  the user's input (string or null)
-_;
-if (_) {
-  /* --- the user canceled --- */
-} else if (_) {
-  /* --- the input has at least one space --- */
+/* --- the user canceled --- */
+let message;
+if (input === null) {
+  message = 'why did you cancel?';
+} else if (input.includes(' ')) {
+/* --- the input has at least one space --- */
+  message = '"' + input + '" has at least one space';
 } else {
   /* --- the input has no spaces --- */
+  message = '"' + input + '" has no spaces';
 }
 //  Data After:   a message describing the user's input
 
 /* --- alert the message to the user --- */
-
+alert(message);
 //  Data Out:     the user's message
 _;
